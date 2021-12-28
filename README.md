@@ -3,7 +3,7 @@
 ## Create ssh keys
 
 On OSX create ssh-keys
-```
+```PowerShell
 ssh-keygen -t ed25519 
 ```
 
