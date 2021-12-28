@@ -41,6 +41,9 @@ sftp <storage_account_name>.<localuser_name>@<endpoint>
 # E.g. sftp testaccount.user2@testaccount.blob.core.windows.net
 ```
 
+# Using the service
+
+## With command line
 Upload file
 ```PowerShell
 sftp {user}@{host}:{remote_dir} <<< $'put {local_file_path}'
@@ -50,3 +53,6 @@ Download file
 ```PowerShell
 sftp {user}@{host}:{remoteFileName} {localFileName}
 ```
+## Azure storage explorer
+
+It is also possible to use azure storage explorer to view the created blob container.
