@@ -14,6 +14,14 @@ pbcopy < ~/.ssh/id_ed25519.pub
 
 ## Resource creation
 
+If the feature is not registered, you must do so before proceeding:
+```
+// Check status
+az feature show --namespace Microsoft.Storage --name AllowSFTP
+// Register
+az feature register --namespace Microsoft.Storage --name AllowSFTP 
+
+
 Following commands do create the resource group and deploy `bicep` file:
 ```
 # Create resource group if not exists
