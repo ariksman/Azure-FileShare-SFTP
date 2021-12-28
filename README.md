@@ -22,21 +22,7 @@ az feature show --namespace Microsoft.Storage --name AllowSFTP
 az feature register --namespace Microsoft.Storage --name AllowSFTP 
 ```
 
-Following commands do create the resource group and deploy `bicep` file:
-```PowerShell
-# Create resource group if not exists
-az group create \
-  --name rg-bicep \
-  --location westus
-
-# Deploy 
-az deployment group create \
-  --name myStorageDeployment1 \
-  --resource-group rg-bicep \
-  --template-file main.bicep \
-  --parameters @main.parameters.json \
-  --parameters location='centralus'
-```
+Following commands do create the resource group and deploy `bicep` file. During the deployment, you will be asked for the storage-account name, user-name and ssh-key.
 
 Create resource group and deploy:
 ```PowerShell
