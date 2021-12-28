@@ -1,4 +1,4 @@
-# Create fully managed SFTP filesharing service on Azure
+# Create a fully managed SFTP filesharing service on Azure
 
 ## Create ssh keys
 
