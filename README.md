@@ -43,7 +43,7 @@ sftp <storage_account_name>.<localuser_name>@<endpoint>
 
 # Using the service
 
-## With command line
+## Command line
 Upload file
 ```PowerShell
 sftp {user}@{host}:{remote_dir} <<< $'put {local_file_path}'
