@@ -15,10 +15,10 @@ pbcopy < ~/.ssh/id_ed25519.pub
 ## Resource creation
 
 If the feature is not registered, you must do so before proceeding:
-```PowerShell
-// Check status
+```shell
+# Check status
 az feature show --namespace Microsoft.Storage --name AllowSFTP
-// Register
+# Register
 az feature register --namespace Microsoft.Storage --name AllowSFTP 
 ```
 
