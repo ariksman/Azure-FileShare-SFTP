@@ -20,16 +20,16 @@ If the feature is not registered, you must do so before proceeding:
 az feature show --namespace Microsoft.Storage --name AllowSFTP
 // Register
 az feature register --namespace Microsoft.Storage --name AllowSFTP 
-
+```
 
 Following commands do create the resource group and deploy `bicep` file:
 ```
-# Create resource group if not exists
+// Create resource group if not exists
 az group create \
   --name rg-bicep \
   --location westus
 
-# Deploy 
+// Deploy 
 az deployment group create \
   --name myStorageDeployment1 \
   --resource-group rg-bicep \
