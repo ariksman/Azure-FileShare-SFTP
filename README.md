@@ -30,7 +30,12 @@ az deployment group create \
   --parameters location='centralus'
 ```
 
-Create resource group:
+Create resource group and deploy:
 ```
 az group create --resource-group file-share-ne-dev-rg --locatio northeurope --parameters location='centralus'
 ```
+
+Connect to file share
+```
+sftp <storage_account_name>.<localuser_name>@<endpoint>
+# E.g. sftp testaccount.user2@testaccount.blob.core.windows.net
