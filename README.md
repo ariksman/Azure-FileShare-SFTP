@@ -56,3 +56,6 @@ sftp {user}@{host}:{remoteFileName} {localFileName}
 ## Azure storage explorer
 
 It is also possible to use azure storage explorer to view the created blob container.
+
+## Links
+https://docs.microsoft.com/en-us/azure/storage/blobs/secure-file-transfer-protocol-support
