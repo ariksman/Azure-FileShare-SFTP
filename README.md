@@ -45,6 +45,7 @@ Connect to file share
 ```
 sftp <storage_account_name>.<localuser_name>@<endpoint>
 # E.g. sftp testaccount.user2@testaccount.blob.core.windows.net
+```
 
 Upload file
 ```
@@ -52,7 +53,6 @@ sftp {user}@{host}:{remote_dir} <<< $'put {local_file_path}'
 ```
 
 Download file
-
 ```
 sftp {user}@{host}:{remoteFileName} {localFileName}
 ```
