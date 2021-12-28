@@ -32,10 +32,27 @@ az deployment group create \
 
 Create resource group and deploy:
 ```
-az group create --resource-group file-share-ne-dev-rg --locatio northeurope --parameters location='centralus'
+az group create --resource-group file-sharing-ne-dev-rg --locatio northeurope
+
+az deployment group create \       
+  --name deployFileSharing \  
+  --resource-group file-sharing-ne-dev-rg \
+  --template-file azureFileShare.bicep \
+  --parameters location='northeurope'
 ```
 
 Connect to file share
 ```
 sftp <storage_account_name>.<localuser_name>@<endpoint>
 # E.g. sftp testaccount.user2@testaccount.blob.core.windows.net
+
+Upload file
+```
+sftp {user}@{host}:{remote_dir} <<< $'put {local_file_path}'
+```
+
+Download file
+
+```
+sftp {user}@{host}:{remoteFileName} {localFileName}
+```
