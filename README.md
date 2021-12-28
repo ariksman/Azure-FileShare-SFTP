@@ -8,14 +8,14 @@ ssh-keygen -t ed25519
 ```
 
 Copy to clipboard
-```
+```PowerShell
 pbcopy < ~/.ssh/id_ed25519.pub
 ```
 
 ## Resource creation
 
 If the feature is not registered, you must do so before proceeding:
-```
+```PowerShell
 // Check status
 az feature show --namespace Microsoft.Storage --name AllowSFTP
 // Register
@@ -23,7 +23,7 @@ az feature register --namespace Microsoft.Storage --name AllowSFTP
 ```
 
 Following commands do create the resource group and deploy `bicep` file:
-```
+```PowerShell
 // Create resource group if not exists
 az group create \
   --name rg-bicep \
@@ -39,7 +39,7 @@ az deployment group create \
 ```
 
 Create resource group and deploy:
-```
+```PowerShell
 az group create --resource-group file-sharing-ne-dev-rg --locatio northeurope
 
 az deployment group create \       
@@ -50,17 +50,17 @@ az deployment group create \
 ```
 
 Connect to file share
-```
+```PowerShell
 sftp <storage_account_name>.<localuser_name>@<endpoint>
 # E.g. sftp testaccount.user2@testaccount.blob.core.windows.net
 ```
 
 Upload file
-```
+```PowerShell
 sftp {user}@{host}:{remote_dir} <<< $'put {local_file_path}'
 ```
 
 Download file
-```
+```PowerShell
 sftp {user}@{host}:{remoteFileName} {localFileName}
 ```
