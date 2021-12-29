@@ -61,13 +61,13 @@ It is also possible to use azure storage explorer to view the created blob conta
 
 Cost are estimated for the north europe, are subject of changes:
 ```Csharp
-howManyMessages = (dataSize / messageSize);
+howManyMessages = ( dataSize / messageSize );
 howManyOperations = ( howManyMessages / 10000 );
 Cost = howManyOperations * 0,0447€
 ```
 
 | Description      |SFTP message size| SFTP message count   | EUR     |
-| :--------------- |:---------------:|:--------------------:| -------:|
+| :--------------- |:---------------:| --------------------:| -------:|
 | Write 1GB cost   | 100KB           | 10000                | 0,0447€ |
 | Write 100GB cost | 100KB           | 1000000              | 4,47€   |
 | Write 100GB cost | 256KB           | 390625               | 1,746€  |
