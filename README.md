@@ -57,5 +57,24 @@ sftp {user}@{host}:{remoteFileName} {localFileName}
 
 It is also possible to use azure storage explorer to view the created blob container.
 
+## Costs
+
+Cost are estimated for the north europe, are subject of changes:
+```Csharp
+howManyMessages = (dataSize / messageSize);
+howManyOperations = ( howManyMessages / 10000 );
+Cost = howManyOperations * 0,0447€
+```
+
+| Description      |SFTP message size| SFTP message count   | EUR     |
+| :--------------- |:---------------:|:--------------------:| -------:|
+| Write 1GB cost   | 100KB           | 10000                | 0,0447€ |
+| Write 100GB cost | 100KB           | 1000000              | 4,47€   |
+| Write 100GB cost | 256KB           | 390625               | 1,746€  |
+| Read 1GB cost    | 100KB           | 10000                | 0.0036€ |
+| Read 100GB cost  | 100KB           | 1000000              | 0.36€   |
+| Read 100GB cost  | 256KB           | 390625               | 0,141€  |
+
 ## Links
 https://docs.microsoft.com/en-us/azure/storage/blobs/secure-file-transfer-protocol-support
+https://azure.microsoft.com/en-us/pricing/details/storage/blobs/
