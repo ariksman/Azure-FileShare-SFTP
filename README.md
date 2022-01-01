@@ -63,7 +63,7 @@ Cost are estimated for the north europe, are subject of changes:
 ```Csharp
 howManyMessages = ( dataSize / messageSize );
 howManyOperations = ( howManyMessages / 10000 );
-Cost = howManyOperations * 0,0447€
+totalCost = howManyOperations * 0,0447€
 ```
 
 | Description |SFTP message size| SFTP message count   | EUR     |
